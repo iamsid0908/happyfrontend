@@ -1,0 +1,13 @@
+#root {
+  max-width: 1280px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.gotit-btn{
+  border: 1px solid skyblue;
+  height: 30px;
+  width: 100px;
+  background-color: skyblue;
+
+}

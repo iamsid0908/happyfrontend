@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+.click-btn{
+    width: 100px;
+    height: 30px;
+    background-color: tomato;
+    border: 1px solid tomato;
+    color:white
+
+}
