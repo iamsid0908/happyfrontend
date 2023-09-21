@@ -1,13 +1,14 @@
 import React from 'react';
-import Chatbot from './Chatbot';
+import Chatbot from './Componenet/Calender/Calender';
 import { useDispatch } from 'react-redux'
-import { setname } from '../feature/user';
 import { useNavigate } from 'react-router-dom';
+import { createCustomMessage } from 'react-chatbot-kit';
+import { setslot } from '../feature/user';
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const dispatch = useDispatch();
     const initialAction  = (val)=>{
-        const message = createChatBotMessage(`${val}`)
+        const message = createCustomMessage(`${val}`,"user")
         updateState(message);
     }
     const getCalender  = ()=>{
@@ -18,21 +19,20 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }
 
     const aftercalender = (val)=>{
-      const message = createChatBotMessage(`${val}`)
-      
-      dispatch(setname({slot:val}));
-  
-      updateState(message)
+      const message = createCustomMessage(`${val}`,"user")
+      updateState(message);
     }
 
     const enterName =()=>{
       const message = createChatBotMessage("enter your name")
-      updateState(message ,"age")
+      updateState(message ,"name")
     }
 
     const enterAge =()=>{
       const message = createChatBotMessage("enter your age")
-      updateState(message)
+      updateState(message,"age")
+
+      
       
     }
     

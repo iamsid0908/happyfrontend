@@ -16,21 +16,17 @@ function App() {
     <Routes>
      <Route path = "/" element={<Home/>}/>
      <Route path ="/meet" element={
-      <Chatbot
+      <Chatbot className="chatbot"
       config={config}
       messageParser={MessageParser}
       actionProvider={ActionProvider}
     />
     
      }/>
-
-
-     
-      <Route path="/display" element={<Display/>} />
+     <Route path="/display" element={ <Display/>}/>
       </Routes>
-
       
-    {/* <Display/> */}
+    
     </>
   )
 }
